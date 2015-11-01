@@ -1,0 +1,11 @@
+<p>{{ user.username }}</p>
+
+{% if todo_list %}
+    <ul>
+        {% for todo in todo_list %}
+            <li>{{ todo.memo }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No item are available.</p>
+{% endif %}

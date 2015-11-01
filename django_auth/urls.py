@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^logout/$', 'django.contrib.auth.views.logout',
         {'template_name': 'account/logout.html'}),
     url(r'^account/', include('account.urls', namespace='account')),
+    url(r'^todo/', include('todo.urls')),
 ]
 
