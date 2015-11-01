@@ -18,4 +18,10 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^login/$', 'django.contrib.auth.views.login',
+        {'template_name': 'account/login.html'}),
+    url(r'^logout/$', 'django.contrib.auth.views.logout',
+        {'template_name': 'account/logout.html'}),
+    url(r'^account/', include('account.urls', namespace='account')),
 ]
+
